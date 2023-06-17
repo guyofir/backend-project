@@ -9,23 +9,23 @@ const costSchema = new mongoose.Schema({
   },
   user_id: {
     type: Number,
-    required: [true, "Cost must have a user id"],
+    required: [true, "No user id entered"],
     index: true,
   },
   year: {
     type: Number,
-    required: [true, "Cost must have a year"],
+    required: [true, "No year entered"],
     index: true,
   },
   month: {
     type: Number,
-    required: [true, "Cost must have a month"],
+    required: [true, "No month entered"],
     index: true,
   },
-  day: { type: Number, required: [true, "Cost must have a day"] },
+  day: { type: Number, required: [true, "No day entered"] },
   description: {
     type: String,
-    required: [true, "Cost must have a description"],
+    required: [true, "No description entered"],
   },
   category: {
     type: String,
@@ -39,7 +39,7 @@ const costSchema = new mongoose.Schema({
       "other",
     ],
   },
-  sum: { type: Number, required: [true, "Cost must have a sum"] },
+  sum: { type: Number, required: [true, "No sum entered"] },
 });
 
 costSchema.pre("save", async function (next) {

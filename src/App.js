@@ -36,9 +36,9 @@ const createUser = async () => {
         birthday: "January, 10th, 1990",
       });
       user.save();
-      console.log("User added successfully");
+      console.log("User added successfully to User collection");
     } else {
-      console.log("User already exists, skipping creation");
+      console.log("User already exists with this id, not create a new user");
     }
   };
 
