@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const User = require("./models/user-model");
-const MONGODB_URI = `mongodb+srv://guyofir21:Guy123@cluster0.002gm25.mongodb.net/?retryWrites=true&w=majority`;
-
 require("dotenv").config();
 
+const MONGODB_URI = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@cluster0.002gm25.mongodb.net/`;
+
+console.log(process.env.MONGODB_PASS)
 const app = express();
 const port = process.env.PORT || 3000;
 
